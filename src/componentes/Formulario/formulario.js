@@ -5,18 +5,8 @@ import CampoTexto from "../CampoTexto/CampoTexto";
 import Botao from "../Botao/Botao";
 
 
-const times = [
-  'Programação',
-  'Front-End',
-  'Data Science',
-  'Devops',
-  'UX e Design',
-  'Mobile',
-  'Inovação e Gestão'
-];
- 
 
-function Formulario() {
+function Formulario({times, aoColaboradorCadastrado}) {
 
   const [nome, setNome] = useState('teste')
   const [cargo, setCargo] = useState('')
@@ -25,9 +15,17 @@ function Formulario() {
 
   function aoSalvar(evento) {
     evento.preventDefault()
-    console.log("Form foi subtmetido => ", nome, cargo, imagem, time)
-  }
- 
+    aoColaboradorCadastrado({
+        nome,
+        cargo,
+        imagem,
+        time
+    })
+    setNome('')
+    setCargo('')
+    setImagem('')
+    setTime('')
+}
   return(  
   <section className="formulario">
     <form onSubmit={aoSalvar}>
