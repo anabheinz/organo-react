@@ -1,0 +1,11 @@
+.time {
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 32px;
+}
+
+.time h3{
+    border-bottom: 4px solid;
+    padding-bottom: 8px;
+}
