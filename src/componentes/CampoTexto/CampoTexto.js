@@ -1,9 +1,6 @@
-import { useState } from 'react';
 import './CampoTexto.css'
 
-function CampoTexto({ texto, placeholder, label, aoAlterado }) {
-
-    const [valor, setValor] = useState('')
+function CampoTexto({ valor, placeholder, label, aoAlterado }) {
 
     const aoDigitado = (evento) => {
         aoAlterado(evento.target.value)
@@ -12,7 +9,7 @@ function CampoTexto({ texto, placeholder, label, aoAlterado }) {
     return (
         <div className="campo-texto">
             <label>{label}</label>
-            <input onChange={aoDigitado} value={texto} placeholder={placeholder} />
+            <input onChange={aoDigitado} value={valor} placeholder={placeholder} />
         </div>
     );
 }

@@ -8,7 +8,7 @@ import Botao from "../Botao/Botao";
 
 function Formulario({times, aoColaboradorCadastrado}) {
 
-  const [nome, setNome] = useState('teste')
+  const [nome, setNome] = useState('')
   const [cargo, setCargo] = useState('')
   const [imagem, setImagem] = useState('')
   const [time, setTime] = useState('')
@@ -25,7 +25,8 @@ function Formulario({times, aoColaboradorCadastrado}) {
     setCargo('')
     setImagem('')
     setTime('')
-}
+  }
+
   return(  
   <section className="formulario">
     <form onSubmit={aoSalvar}>
@@ -34,21 +35,21 @@ function Formulario({times, aoColaboradorCadastrado}) {
       <CampoTexto
       label="Nome"
       placeholder="Digite seu nome"
-      value={nome}
+      valor={nome}
       aoAlterado={valor => setNome(valor)}
       />
 
       <CampoTexto
       label="Cargo"
       placeholder="Digite seu cargo"
-      value={cargo}
+      valor={cargo}
       aoAlterado={valor => setCargo(valor)}
       />
 
       <CampoTexto
       label="Imagem"
       placeholder="Digite o endereço da imagem"
-      value={imagem}
+      valor={imagem}
       aoAlterado={imagem => setImagem(imagem)}/>
 
       <ListaSuspensa
