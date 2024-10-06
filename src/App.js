@@ -23,7 +23,7 @@ function App({aoColaboradorCadastrado}) {
       corSecundaria: '#FDE7E8'
     },
     {nome: 'UX e Design',
-      corPrimaria: '##D86EBF',
+      corPrimaria: '#D86EBF',
       corSecundaria: '#FAE5F5'
     },
     {nome: 'Mobile',
@@ -33,7 +33,7 @@ function App({aoColaboradorCadastrado}) {
     {nome: 'Inovação e Gestão',
       corPrimaria: '#FF8A29',
       corSecundaria: '#FFEEDF'
-    },
+    }
   ]
 
   const [colaboradores, setColaboradores] = useState([]);

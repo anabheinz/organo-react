@@ -6,13 +6,17 @@ function Time({nome, corPrimaria, corSecundaria, colaboradores}) {
 
         colaboradores.length > 0 &&
         <section className="time" style={{backgroundColor: corSecundaria}}>
+
             <h3 style={{borderColor: corPrimaria}}>{nome}</h3>
+            
             <div className='colaboradores'>
                 {colaboradores.map(colaborador => <Colaborador
+                    corDeFundo={corPrimaria}
                     key={colaborador}
                     nome={colaborador.nome}
                     cargo={colaborador.cargo}
-                    imagem={colaborador.imagem}/>)}
+                    imagem={colaborador.imagem}
+                    />)}
             </div>
             
         </section>     
